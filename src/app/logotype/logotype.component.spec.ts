@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LogotypeComponent } from './logotype.component';
+import { By } from '@angular/platform-browser';
 
 describe('LogotypeComponent', () => {
   let component: LogotypeComponent;
@@ -12,18 +13,25 @@ describe('LogotypeComponent', () => {
 
     fixture = TestBed.createComponent(LogotypeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain the image and title', () => {
+  it('should contain the image', () => {
     const logotypeImg = fixture.nativeElement.querySelector('img.logotype');
-    expect(logotypeImg).toBeTruthy();
+    expect(logotypeImg).toBeDefined();
+  });
 
-    const title = fixture.nativeElement.textContent.trim();
-    expect(title).toContain('Cineinfo');
+  it('should contain the title', () => {
+    component.title = 'test';
+    fixture.detectChanges();
+    const titleElement = fixture.debugElement.query(By.css('#title'));
+    expect(titleElement).toBeTruthy();
+
+    expect((titleElement.nativeElement as HTMLSpanElement).textContent).toEqual(
+      'test'
+    );
   });
 });

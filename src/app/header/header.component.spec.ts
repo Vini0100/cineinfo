@@ -21,7 +21,7 @@ describe('HeaderComponent', () => {
   });
 
   it('should contain the app-logotype component', () => {
-    const logotypeElement = fixture.nativeElement.queryClass('logotype');
+    const logotypeElement = fixture.nativeElement.querySelector('app-logotype');
     expect(logotypeElement).toBeTruthy();
   });
 });
