@@ -6,6 +6,10 @@
 
 <b>CineInfo</b> is an application that allows users to search for movies by their title. It fetches and presents essential details, including the poster image, rating, official title, and plot, utilizing the OMDb API to provide a comprehensive movie experience.
 
+<div align="center">
+  <img src="./public/appGif.gif" alt="Project demonstration">
+</div>
+
 ## 🔨 Features
 
 - Search for movie titles
