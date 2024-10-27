@@ -1,0 +1,24 @@
+<footer class="bg-body-tertiary fontPoppinsRegular">
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div>
+        <h5 class="fontPoppinsMedium">Some Movies Titles:</h5>
+        <ul
+          class="d-flex list-unstyled flex-wrap align-items-start text-nowrap gap-3"
+        >
+          <li
+            *ngFor="let movie of movies"
+            class="col"
+            (click)="movieClick(movie)"
+            title="{{ movie }}"
+          >
+            {{ movie }}
+          </li>
+        </ul>
+      </div>
+      <span class="navbar-brand">
+        <app-logotype></app-logotype>
+      </span>
+    </div>
+  </nav>
+</footer>
