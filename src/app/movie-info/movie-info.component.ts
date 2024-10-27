@@ -5,6 +5,7 @@ import { IMovie } from './api/model/movie';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movie-info',
@@ -20,7 +21,8 @@ export class MovieInfoComponent implements OnInit, OnDestroy {
   constructor(
     private param: ActivatedRoute,
     private movieInfoService: MovieInfoService,
-    private route: Router
+    private route: Router,
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -42,5 +44,33 @@ export class MovieInfoComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.routeSub?.unsubscribe();
+  }
+
+  stars(rating: string): SafeHtml {
+    const ratingValue = parseFloat(rating);
+    const fullStars = Math.floor(ratingValue / 2);
+    const halfStar = ratingValue % 2 >= 1;
+    const starIcons = [];
+
+    for (let i = 0; i < fullStars; i++) {
+      starIcons.push(
+        '<img src="/icons/star.svg" alt="Full Star" class="star-icon" />'
+      );
+    }
+
+    if (halfStar) {
+      starIcons.push(
+        '<img src="/icons/star-half.svg" alt="Half Star" class="star-icon" />'
+      );
+    }
+
+    const remainingStars = 5 - fullStars - (halfStar ? 1 : 0);
+    for (let i = 0; i < remainingStars; i++) {
+      starIcons.push(
+        '<img src="/icons/star-empty.svg" alt="Empty Star" class="star-icon opacity-50" />'
+      );
+    }
+
+    return this.sanitizer.bypassSecurityTrustHtml(starIcons.join(''));
   }
 }
