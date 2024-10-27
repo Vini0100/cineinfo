@@ -8,13 +8,13 @@ import { Component, Input } from '@angular/core';
   styleUrl: './logotype.component.scss',
 })
 export class LogotypeComponent {
-  constructor() {}
-
-  @Input()
-  title: string = 'CineInfo';
-
   logotype = {
     src: '/icons/logotype.svg',
     alt: 'Logotype',
   };
+
+  constructor() {}
+
+  @Input()
+  title: string = 'CineInfo';
 }
