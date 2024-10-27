@@ -1,27 +1,66 @@
-# Cineinfo
+# <img src="public/icons/logotype.svg" alt="Logotype" style="margin-left: 20px; vertical-align: middle; width: 30px" /> CineInfo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+![Badge Status](http://img.shields.io/static/v1?label=STATUS&message=FINISH&color=GREEN&style=for-the-badge)
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<b>CineInfo</b> is an application that allows users to search for movies by their title. It fetches and presents essential details, including the poster image, rating, official title, and plot, utilizing the OMDb API to provide a comprehensive movie experience.
 
-## Code scaffolding
+## 🔨 Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Search for movie titles
+- View detailed information about the searched movies
 
-## Build
+## ✔️ Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Main Technologies
 
-## Running unit tests
+- `Angular 18`
+- `TypeScript`
+- `Bootstrap 5`
+- `SCSS`
+- `OMDb API`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Testing Tools
 
-## Running end-to-end tests
+- `jasmine`
+- `karma`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🛠️ Getting Started
 
-## Further help
+To get a local copy of the project up and running, follow these steps:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Vini0100/cineinfo.git
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   ng serve
+   ```
+
+4. Open your browser and visit http://localhost:4200 to view the application.
+
+## 🧪 Testing
+
+To run the tests for the project, use the following commands:
+
+- Run tests:
+
+  ```bash
+  ng test
+  ```
+
+# Author 👨‍💻
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/126361791?v=4" width=115><br><sub>Vinícius Andrade Gonzato</sub>](https://github.com/Vini0100) |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------: |
