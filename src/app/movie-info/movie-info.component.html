@@ -14,8 +14,14 @@
       <li>
         <span class="fontPoppinsSemiBold">Actor:</span> {{ movie.Actors }}
       </li>
-      <li>
-        <span class="fontPoppinsSemiBold">Review:</span> {{ movie.imdbRating }}
+      <li class="d-flex gap-1">
+        <span class="fontPoppinsSemiBold">Review:</span>
+        <span
+          [innerHTML]="stars(movie.imdbRating)"
+          class="d-flex gap-1"
+          title="{{ movie.imdbRating }}"
+        >
+        </span>
       </li>
     </ul>
     <button class="btn btn-outline-secondary fontPoppinsMedium">
