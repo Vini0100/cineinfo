@@ -1,0 +1,52 @@
+<section
+  *ngIf="movie; else loading"
+  class="d-flex px-2 flex-wrap flex-lg-nowrap justify-content-center justify-content-lg-between gap-3 gap-lg-0 fontPoppinsRegular"
+>
+  <img
+    src="{{ movie.Poster }}"
+    alt="{{ movie.Title }} - Movie Poster"
+    class="img-fluid img-thumbnail rounded-0 border-black border-2 order-lg-last"
+  />
+  <div class="col-lg-8 d-flex flex-column align-items-start gap-2">
+    <h2 class="fontPoppinsBold">{{ movie.Title }}</h2>
+    <p>{{ movie.Plot }}</p>
+    <ul class="list-unstyled">
+      <li>
+        <span class="fontPoppinsSemiBold">Actor:</span> {{ movie.Actors }}
+      </li>
+      <li>
+        <span class="fontPoppinsSemiBold">Review:</span> {{ movie.imdbRating }}
+      </li>
+    </ul>
+    <button class="btn btn-outline-secondary fontPoppinsMedium">
+      Favorite <img src="/icons/heart.svg" alt="Heart" class="heart-icon" />
+    </button>
+  </div>
+</section>
+
+<ng-template #loading>
+  <section
+    aria-hidden="true"
+    class="d-flex flex-lg-row flex-column flex-nowrap justify-content-between gap-2 row-gap-lg-0 fontPoppinsRegular"
+  >
+    <div
+      class="placeholder-glow col-10 col-lg-3 imgLoading order-lg-last align-self-center"
+    ></div>
+    <div class="w-50 d-flex flex-column gap-4">
+      <h5 class="card-title placeholder-glow">
+        <span class="placeholder col-6"></span>
+      </h5>
+      <p class="card-text placeholder-glow d-flex flex-column gap-2">
+        <span class="placeholder col-12"></span>
+        <span class="placeholder col-12"></span>
+        <span class="placeholder col-12"></span>
+        <span class="placeholder col-12"></span>
+      </p>
+      <a
+        class="btn btn-secondary disabled placeholder col-3 d-flex justify-content-end py-2"
+        aria-disabled="true"
+        ><img src="/icons/heart.svg" alt="Heart" class="heart-icon"
+      /></a>
+    </div>
+  </section>
+</ng-template>

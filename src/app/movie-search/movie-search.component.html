@@ -1,0 +1,41 @@
+<section class="d-flex flex-column pt-5 px-2 gap-5 fontPoppinsRegular">
+  <div class="d-flex flex-column gap-4 align-items-center">
+    <div class="d-flex flex-column text-center">
+      <h1 class="fontPoppinsBold">CineInfo</h1>
+      <p>
+        CineInfo is a Single Page Application (SPA) designed to provide
+        information about a movie title searched in the input field
+        <span class="fontPoppinsSemiBold">below</span>.
+      </p>
+    </div>
+    <form
+      class="row gx-3 gy-2 align-items-center justify-content-center w-75"
+      role="search"
+      (ngSubmit)="onSubmit()"
+      [formGroup]="formSearch"
+    >
+      <div class="col-12 col-lg-6">
+        <input
+          formControlName="searchInput"
+          class="form-control rounded-0"
+          type="search"
+          placeholder="Type a movie title"
+          aria-label="Search"
+        />
+      </div>
+      <div
+        class="col-12 col-lg-6 d-flex gap-3 justify-content-center justify-content-lg-start"
+      >
+        <button class="btn btn-success w-100 w-lg-auto" type="submit">
+          Search
+        </button>
+        <input
+          class="btn btn-outline-secondary w-100 w-lg-auto"
+          type="button"
+          value="Reset"
+          (click)="reset()"
+        />
+      </div>
+    </form>
+  </div>
+</section>
