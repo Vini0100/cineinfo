@@ -33,8 +33,8 @@
 ## 🛠️ Getting Started
 
 ### Pre-requisites
-- **Node.js** (recommended version 14.x or higher)
-- **Angular CLI** (recommended version 12.x or higher)
+- **Node.js**
+- **Angular CLI**
 
 Install the Angular CLI globally:
 
