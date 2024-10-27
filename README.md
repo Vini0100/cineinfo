@@ -32,6 +32,17 @@
 
 ## 🛠️ Getting Started
 
+### Pre-requisites
+- **Node.js** (recommended version 14.x or higher)
+- **Angular CLI** (recommended version 12.x or higher)
+
+Install the Angular CLI globally:
+
+```bash
+npm install -g @angular/cli
+```
+
+### Setup Instructions
 To get a local copy of the project up and running, follow these steps:
 
 1. Clone the repository:
